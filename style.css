@@ -40,7 +40,7 @@ body {
 
 .rightColumn_header {
   text-align: center;
-  font-family: "game_of_thronesregular", serif;
+  font-family: "Game of Thrones", serif;
   font-size: 1em;
   font-weight: lighter;
   margin-top: 2em;
@@ -56,19 +56,19 @@ form {
 
 label {
   font-size: 1.3em;
-  font-family: "eb_garamond08_regular", "open_sansregular", serif;
+  font-family: "EB Garamond", serif;
   position: relative;
 }
 
 .note {
   color: #fef8eb;
   font-size: 0.8em;
-  font-family: "eb_garamond08_regular", "open_sansregular", serif;
+  font-family: "EB Garamond",  serif;
 }
 
 .info_msg {
   font-size: 1em;
-  font-family: "eb_garamond08_regular", "open_sansregular", serif;
+  font-family: "EB Garamond",  serif;
   color: #fef8eb;
   padding: 0 0 0 1em;
   margin: 1em 0;
@@ -82,7 +82,7 @@ input {
   margin: 1em 0;
   padding-bottom: 5px;
   border-bottom: 2px solid #d3bb89;
-  font-family: "open_sansregular", "eb_garamond08_regular", sans-serif;
+  font-family: "Open Sans",   sans-serif;
   font-size: 1em;
   height: 3em;
 }
@@ -99,7 +99,7 @@ select {
   height: 3em;
   padding-bottom: 1.2em;
   border-bottom: 2px solid #d3bb89;
-  font-family: "open_sansregular", "eb_garamond08_regular", sans-serif;
+  font-family: "Open Sans",   sans-serif;
 }
 
 #aboutUser {
@@ -108,7 +108,7 @@ select {
   color: #fef8eb;
   height: 4em;
   margin:  1em 0;
-  font-family: "open_sansregular", "eb_garamond08_regular", sans-serif;
+  font-family: "Open Sans",   sans-serif;
   font-size: 1em;
   border-bottom: 2px solid #d3bb89;
 }
@@ -117,7 +117,7 @@ select {
   background-color: #c19a49;
   color: #fef8eb;
   border: none;
-  height: 3em; 
+  height: 3em;
   line-height: 2.5;
 }
 
@@ -160,26 +160,31 @@ select {
   color: #000;
 }
 
-@font-face {
-  font-family: 'game_of_thronesregular';
-  src: url('fonts/gameofthrones-webfont.woff2') format('woff2'),
-  url('fonts/gameofthrones-webfont.woff') format('woff');
-  font-weight: lighter;
-  font-style: normal;
-}
 
-@font-face {
-  font-family: 'eb_garamond08_regular';
-  src: url('fonts/ebgaramond08-regular-webfont.woff2') format('woff2'),
-  url('fonts/ebgaramond08-regular-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
 
-@font-face {
-  font-family: 'open_sansregular';
-  src: url('fonts/opensans-regular-webfont.woff2') format('woff2'),
-  url('fonts/opensans-regular-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
+  @font-face {
+     font-family: 'Game of Thrones';
+     src: local('Game of Thrones'), local('GameofThrones'),
+         url('fonts/GameofThrones.woff2') format('woff2'),
+         url('fonts/GameofThrones.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+ }
+
+ @font-face {
+     font-family: 'EB Garamond';
+     src: local('EB Garamond Regular'), local('EBGaramond-Regular'),
+         url('fonts/EBGaramond-Regular.woff2') format('woff2'),
+         url('fonts/EBGaramond-Regular.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+ }
+
+ @font-face {
+     font-family: 'Open Sans';
+     src: local('Open Sans Regular'), local('OpenSans-Regular'),
+         url('fonts/OpenSans-Regular.woff2') format('woff2'),
+         url('fonts/OpenSans-Regular.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+ }
