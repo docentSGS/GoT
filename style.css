@@ -41,7 +41,7 @@ body {
 
 .rightColumn_header {
   text-align: center;
-  font-family: "Game of Thrones", fantasy;
+  font-family: "Game of Thrones", serif;
   font-size: 1em;
   font-weight: lighter;
   margin-top: 2em;
@@ -86,7 +86,7 @@ input {
   font-size: 1em;
   height: 3em;
   outline: none;
-	-moz-appearance: none;
+  -moz-appearance: none;
 }
 
 select {
@@ -95,7 +95,7 @@ select {
   -moz-appearance: none;
   appearance: none;
   outline: none;
- }
+}
 
 #houses {
   background: #202020;
@@ -117,7 +117,7 @@ select {
   border-bottom: 2px solid #d3bb89;
   resize: none;
   outline: none;
-	-moz-appearance: none;
+  -moz-appearance: none;
 }
 
 .button {
@@ -167,31 +167,29 @@ select {
   color: #000;
 }
 
+@font-face {
+  font-family: 'Game of Thrones';
+  src: local('Game of Thrones'), local('GameofThrones'),
+  url('fonts/GameofThrones.woff2') format('woff2'),
+  url('fonts/GameofThrones.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
+@font-face {
+  font-family: 'EB Garamond';
+  src: local('EB Garamond Regular'), local('EBGaramond-Regular'),
+  url('fonts/EBGaramond-Regular.woff2') format('woff2'),
+  url('fonts/EBGaramond-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
-  @font-face {
-     font-family: 'Game of Thrones';
-     src: local('Game of Thrones'), local('GameofThrones'),
-         url('fonts/GameofThrones.woff2') format('woff2'),
-         url('fonts/GameofThrones.woff') format('woff');
-     font-weight: normal;
-     font-style: normal;
- }
-
- @font-face {
-     font-family: 'EB Garamond';
-     src: local('EB Garamond Regular'), local('EBGaramond-Regular'),
-         url('fonts/EBGaramond-Regular.woff2') format('woff2'),
-         url('fonts/EBGaramond-Regular.woff') format('woff');
-     font-weight: normal;
-     font-style: normal;
- }
-
- @font-face {
-     font-family: 'Open Sans';
-     src: local('Open Sans Regular'), local('OpenSans-Regular'),
-         url('fonts/OpenSans-Regular.woff2') format('woff2'),
-         url('fonts/OpenSans-Regular.woff') format('woff');
-     font-weight: normal;
-     font-style: normal;
- }
+@font-face {
+  font-family: 'Open Sans';
+  src: local('Open Sans Regular'), local('OpenSans-Regular'),
+  url('fonts/OpenSans-Regular.woff2') format('woff2'),
+  url('fonts/OpenSans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
