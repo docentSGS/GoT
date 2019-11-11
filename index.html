@@ -5,50 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Open+Sans&display=swap" rel="stylesheet">
   <title>Task_4_form</title>
-
-
 </head>
+
 <body>
+
   <div class="wrapper">
     <div class="leftColumn"> </div>
     <div class="rightColumn">
       <div class="rightColumn_header"><h1>GAME OF THRONES<br></h1></div>
-      <section class="form_register">
-        <form  action="#" method="post">
+      <section class="form_register" id="box1">
+        <form  class="formWithValidation1">
           <label for="user_email">Enter your email</label>
-          <input id="email" type="email" name="user_email" placeholder="arya@westeros.com">
+          <input id="mail_id" class="email" type="email" name="user_email" placeholder="arya@westeros.com">
           <label for="user_pass">Choose secure password</label>
           <label class="note" for="note"> Must be at least 8 characters</label>
-          <input id="password" type="password" name="user_pass" placeholder="password" minlength="8">
+          <input id="pass_id" class="password" type="password" name="user_pass" placeholder="password" minlength="8">
           <div><input class="checkbox" type="checkbox" name="checkbox" id="newcheck">
-            <label for="newcheck">Remember me</label>
+          <label for="newcheck">Remember me</label>
           </div>
-          <input class="button" type="submit" value="Sign Up">
+          <input class="signUp_btn" id="signUpBtn" type="submit" value="Sign Up">
         </form>
       </section>
 
-      <!-- <section class="form_userInfo">
+      <section class="form_userInfo" id="box2">
         <div class="info_msg">You've succesfully joined the game<br>Tell us more about yourself.</div>
-        <form action="#" method="post">
+        <form class="formWithValidation2">
           <label for="user_name">Who are you?</label>
           <label class="note" for="note">Alpha-numeric username</label>
-          <input id="user_name" type="text" name="user_name" placeholder="arya">
-          <label for="user_house">Your Great House</label>
-          <select id="houses" name="user_house">
-            <option value="Select" selected> Select House </option>
-            <option value="House 1">House 1</option>
-            <option value="House 2">House 2</option>
-            <option value="House 3">House 3</option>
-            <option value="House 4">House 4</option>
+          <input id="name_id" class="userName" type="text" name="user_name" placeholder="arya">
+          <label for="user_house">Your Great House<span id="house_note"></label>
+          <select id="houses" class="select" name="user_house">
+            <option value="Select" selected>Select House</option>
+            <option value="House 1">House Arryn</option>
+            <option value="House 2">House Baratheon</option>
+            <option value="House 3">House Greyjoy</option>
+            <option value="House 4">House Lanister</option>
+            <option value="House 5">House Stark</option>
+            <option value="House 6">House Targaryen</option>
           </select>
-          <label for="comment">You preferences, hobbies, wishes, etc.</label>
-          <textarea id="aboutUser" name="comment" rows="3" cols="20" placeholder="I have a long TOKILL list..."></textarea>
-          <input class="button" type="submit" name="save" value="Save">
+          <label for="comment">You preferences, hobbies, wishes, etc. <span id="comment_note"></span></label>
+          <textarea id="aboutUser" class="comment" name="comment" rows="3" cols="20" placeholder="I have a long TOKILL list..."></textarea>
+          <input class="save_Btn" id="saveBtn" type="submit" name="save" value="Save"  >
         </form>
-      </section> -->
+      </section>
     </div>
   </div>
+<script src="main.js"></script>
 
 </body>
 </html>

@@ -9,7 +9,7 @@ body {
   padding: 0;
   min-height: 100vh;
   width: 100%;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .wrapper {
@@ -57,19 +57,19 @@ form {
 
 label {
   font-size: 1.3em;
-  font-family: "EB Garamond", serif;
+  font-family: 'EB Garamond', serif;
   position: relative;
 }
 
 .note {
   color: #fef8eb;
   font-size: 1em;
-  font-family: "EB Garamond", serif;
+  font-family: 'EB Garamond', serif;
 }
 
 .info_msg {
   font-size: 1em;
-  font-family: "EB Garamond", serif;
+  font-family: 'EB Garamond', serif;
   color: #fef8eb;
   padding: 0 0 0 1em;
   margin: 1em 0;
@@ -120,7 +120,8 @@ select {
   -moz-appearance: none;
 }
 
-.button {
+.signUp_btn,
+.save_Btn {
   background-color: #c19a49;
   color: #fef8eb;
   border: none;
@@ -167,29 +168,24 @@ select {
   color: #000;
 }
 
+#box2{
+  display: none;
+}
+
+.input_error {
+  box-shadow: 0 0 20px #e84118;
+}
+
+#house_note,
+#comment_note {
+  color: #e84118;
+}
+
 @font-face {
   font-family: 'Game of Thrones';
   src: local('Game of Thrones'), local('GameofThrones'),
   url('fonts/GameofThrones.woff2') format('woff2'),
   url('fonts/GameofThrones.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'EB Garamond';
-  src: local('EB Garamond Regular'), local('EBGaramond-Regular'),
-  url('fonts/EBGaramond-Regular.woff2') format('woff2'),
-  url('fonts/EBGaramond-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  src: local('Open Sans Regular'), local('OpenSans-Regular'),
-  url('fonts/OpenSans-Regular.woff2') format('woff2'),
-  url('fonts/OpenSans-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
