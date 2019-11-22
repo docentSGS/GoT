@@ -1,19 +1,20 @@
 window.onload = formsValidate;
 
-let box1 = document.getElementById('box1');
-let box2 = document.getElementById('box2');
+const box1 = document.getElementById('box1');
+const box2 = document.getElementById('box2');
 const emailPattern = /^([a-z0-9_-]{1,15}\.){0,3}[a-z0-9_-]{1,15}@[a-z0-9_-]{1,15}\.[a-z]{2,3}$/;
 const passPattern = /^\S{8,}$/;
 const alphaNumericName = /^[0-9a-zA-Z]+$/;
+const commentPattern = /.{20,}$/;
 
 function formsValidate(){
-  let mail = document.querySelector('.email');
-  let password = document.querySelector('.password');
-  let signUp = document.getElementById('signUpBtn');
-  let userName = document.querySelector('.userName');
-  let house = document.querySelector('.select');
-  let comment = document.getElementById('aboutUser');
-  let saveData = document.getElementById('saveBtn');
+  const mail = document.querySelector('.email');
+  const password = document.querySelector('.password');
+  const signUp = document.getElementById('signUpBtn');
+  const userName = document.querySelector('.userName');
+  const house = document.querySelector('.select');
+  const comment = document.getElementById('aboutUser');
+  const saveData = document.getElementById('saveBtn');
 
   if (mail) {
     mail.addEventListener('blur', validateEmail);
@@ -39,7 +40,7 @@ function formsValidate(){
   }
 
   if (comment) {
-    comment.addEventListener('blur', validateComment);
+    comment.addEventListener('input', validateComment);
   }
 
   if (saveData) {
@@ -75,10 +76,6 @@ function formsValidate(){
         disp(box2);
       }
     }
-    if (!mailPatern.test(email.value)||!passPattern.test(password.value)) {
-      password.classList.add('input_error');
-      return;
-    }
   }
 
   function validateName() {
@@ -101,9 +98,9 @@ function formsValidate(){
   }
 
   function validateComment() {
-    if (comment.value == '') {
+    if (!comment.value.match(commentPattern)) {
       comment.classList.add('input_error');
-      document.getElementById('comment_note').innerHTML = '<br>Please provide details!';
+      document.getElementById('comment_note').innerHTML = '<br>Please provide details (min 20 characters)!';
     } else {
       comment.classList.remove('input_error');
       document.getElementById('comment_note').innerHTML = '';
@@ -112,7 +109,7 @@ function formsValidate(){
 
   function submitData() {
     if (!alphaNumericName.test(userName.value)
-    ||house.value=='Select'||comment.value == '') {
+    ||house.value=='Select'||!comment.value.match(commentPattern)) {
       return;
     } else {
       alert("Congratulate!");

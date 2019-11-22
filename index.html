@@ -16,11 +16,11 @@
     <div class="rightColumn">
       <div class="rightColumn_header"><h1>GAME OF THRONES<br></h1></div>
       <section class="form_register" id="box1">
-        <form  class="formWithValidation1">
+        <form  class="formWithValidation1" autocomplete="off">
           <label for="user_email">Enter your email</label>
           <input id="mail_id" class="email" type="email" name="user_email" placeholder="arya@westeros.com">
           <label for="user_pass">Choose secure password</label>
-          <label class="note" for="note"> Must be at least 8 characters</label>
+          <label class="note"> Must be at least 8 characters</label>
           <input id="pass_id" class="password" type="password" name="user_pass" placeholder="password" minlength="8">
           <div><input class="checkbox" type="checkbox" name="checkbox" id="newcheck">
           <label for="newcheck">Remember me</label>
@@ -31,9 +31,9 @@
 
       <section class="form_userInfo" id="box2">
         <div class="info_msg">You've succesfully joined the game<br>Tell us more about yourself.</div>
-        <form class="formWithValidation2">
+        <form class="formWithValidation2" autocomplete="off">
           <label for="user_name">Who are you?</label>
-          <label class="note" for="note">Alpha-numeric username</label>
+          <label class="note">Alpha-numeric username</label>
           <input id="name_id" class="userName" type="text" name="user_name" placeholder="arya">
           <label for="user_house">Your Great House<span id="house_note"></label>
           <select id="houses" class="select" name="user_house">
@@ -46,8 +46,8 @@
             <option value="House 6">House Targaryen</option>
           </select>
           <label for="comment">You preferences, hobbies, wishes, etc. <span id="comment_note"></span></label>
-          <textarea id="aboutUser" class="comment" name="comment" rows="3" cols="20" placeholder="I have a long TOKILL list..."></textarea>
-          <input class="save_Btn" id="saveBtn" type="submit" name="save" value="Save"  >
+          <textarea id="aboutUser" class="comment" name="comment" rows="3" cols="20" required  placeholder="I have a long TOKILL list..." ></textarea>
+          <input class="save_Btn" id="saveBtn" type="submit" name="save" value="Save">
         </form>
       </section>
     </div>
