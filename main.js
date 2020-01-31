@@ -12,7 +12,8 @@ function formsValidate(){
   const password = document.querySelector('.password');
   const signUp = document.getElementById('signUpBtn');
   const userName = document.querySelector('.userName');
-  const house = document.querySelector('.select');
+  const choosOption = document.getElementById('newSelect');
+  const houses = document.getElementById('newContainer');
   const comment = document.getElementById('aboutUser');
   const saveData = document.getElementById('saveBtn');
 
@@ -35,8 +36,8 @@ function formsValidate(){
     userName.addEventListener('blur', validateName);
   }
 
-  if (house) {
-    house.addEventListener('blur', houseSelect);
+  if (houses) {
+    houses.addEventListener('blur', houseSelect);
   }
 
   if (comment) {
@@ -73,7 +74,7 @@ function formsValidate(){
       mail.classList.remove('input_error');
       if (password.value.match(passPattern)){
         password.classList.remove('input_error');
-        disp(box2);
+        disp();
       }
     }
   }
@@ -88,11 +89,11 @@ function formsValidate(){
   }
 
   function houseSelect() {
-    if (house.value=="Select") {
-      house.classList.add('input_error');
+    if (choosOption.textContent == 'Select House') {
+      houses.classList.add('input_error');
       document.getElementById('house_note').innerHTML = '<br>Select your house from the list!';
     } else {
-      house.classList.remove('input_error');
+      houses.classList.remove('input_error');
       document.getElementById('house_note').innerHTML = '';
     }
   }
@@ -109,17 +110,16 @@ function formsValidate(){
 
   function submitData() {
     if (!alphaNumericName.test(userName.value)
-    ||house.value=='Select'||!comment.value.match(commentPattern)) {
+    ||choosOption.textContent=='Select House'||!comment.value.match(commentPattern)) {
       return;
     } else {
       alert("Congratulate!");
       document.querySelector('.formWithValidation2').submit();
     }
   }
-
 }
 
-function disp(box2) {
+function disp() {
   if (box2.style.display == 'none') {
     box2.style.display = 'block';
     box1.style.display = 'none';

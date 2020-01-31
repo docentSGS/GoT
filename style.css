@@ -23,10 +23,17 @@ body {
   width: 50%;
   position: relative;
   overflow: hidden;
-  background-image: url("img/maxresdefault.jpg");
+  background-color: #202020;
+  /* background-image: url("img/maxresdefault.jpg"); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
 }
 
 .rightColumn {
