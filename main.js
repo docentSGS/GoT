@@ -12,7 +12,7 @@ function formsValidate(){
   const password = document.querySelector('.password');
   const signUp = document.getElementById('signUpBtn');
   const userName = document.querySelector('.userName');
-  const choosOption = document.getElementById('newSelect');
+  const chosenOption = document.getElementById('newSelect');
   const houses = document.getElementById('newContainer');
   const comment = document.getElementById('aboutUser');
   const saveData = document.getElementById('saveBtn');
@@ -89,7 +89,7 @@ function formsValidate(){
   }
 
   function houseSelect() {
-    if (choosOption.textContent == 'Select House') {
+    if (chosenOption.textContent == 'Select House') {
       houses.classList.add('input_error');
       document.getElementById('house_note').innerHTML = '<br>Select your house from the list!';
     } else {
@@ -110,7 +110,7 @@ function formsValidate(){
 
   function submitData() {
     if (!alphaNumericName.test(userName.value)
-    ||choosOption.textContent=='Select House'||!comment.value.match(commentPattern)) {
+    ||chosenOption.textContent=='Select House'||!comment.value.match(commentPattern)) {
       return;
     } else {
       alert("Congratulate!");
