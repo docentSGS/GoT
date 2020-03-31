@@ -1,0 +1,200 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0;
+  min-height: 100vh;
+  width: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper {
+  color: #d3bb89;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.leftColumn {
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+  background-color: #202020;
+  /* background-image: url("img/maxresdefault.jpg"); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+}
+
+.rightColumn {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #202020;
+  text-align: left;
+}
+
+.rightColumn_header {
+  text-align: center;
+  font-family: "Game of Thrones", serif;
+  font-size: 1em;
+  font-weight: lighter;
+  margin-top: 2em;
+}
+
+form {
+  cursor: pointer;
+  background-color: #202020;
+  width: 25em;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2em;
+}
+
+label {
+  font-size: 1.3em;
+  font-family: 'EB Garamond', serif;
+  position: relative;
+}
+
+.note {
+  color: #fef8eb;
+  font-size: 1em;
+  font-family: 'EB Garamond', serif;
+}
+
+.info_msg {
+  font-size: 1em;
+  font-family: 'EB Garamond', serif;
+  color: #fef8eb;
+  padding: 0 0 0 1em;
+  margin: 1em 0;
+  border-left: 2px solid #d3bb89;
+}
+
+input {
+  cursor: pointer;
+  background: #202020;
+  color: #fef8eb;
+  border: none;
+  margin: 1em 0;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #d3bb89;
+  font-size: 1em;
+  height: 3em;
+  outline: none;
+  -moz-appearance: none;
+}
+
+select {
+  font-size: 1em;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+#houses {
+  background: #202020;
+  border: none;
+  color: #fef8eb;
+  margin: 1em 0;
+  height: 3em;
+  padding-bottom: 1.2em;
+  border-bottom: 2px solid #d3bb89;
+}
+
+#aboutUser {
+  background: #202020;
+  border: none;
+  color: #fef8eb;
+  height: 4em;
+  margin:  1em 0;
+  font-size: 1em;
+  border-bottom: 2px solid #d3bb89;
+  resize: none;
+  outline: none;
+  -moz-appearance: none;
+}
+
+.signUp_btn,
+.save_Btn {
+  background-color: #c19a49;
+  color: #fef8eb;
+  border: none;
+  height: 3em;
+  line-height: 2.5;
+}
+
+.checkbox {
+  vertical-align: top;
+  margin: 0 3px 0 0;
+  width: 10px;
+  height: 10px;
+}
+
+.checkbox + label {
+  cursor: pointer;
+}
+
+.checkbox:not(checked) {
+  position: absolute;
+  opacity: 0;
+}
+
+.checkbox:not(checked) + label {
+  position: relative;
+  padding: 0 0 0 40px;
+}
+
+.checkbox:not(checked) + label:before {
+  content: '';
+  position: absolute;
+  text-align: center;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: #d3bb89;
+  border-radius: 3px;
+}
+
+.checkbox:checked + label:before {
+  background: #c19a49;
+  content: '*';
+  color: #000;
+}
+
+#box2{
+  display: none;
+}
+
+.input_error {
+  box-shadow: 0 0 20px #e84118;
+}
+
+#house_note,
+#comment_note {
+  color: #e84118;
+}
+
+@font-face {
+  font-family: 'Game of Thrones';
+  src: local('Game of Thrones'), local('GameofThrones'),
+  url('../fonts/GameofThrones.woff2') format('woff2'),
+  url('../fonts/GameofThrones.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
